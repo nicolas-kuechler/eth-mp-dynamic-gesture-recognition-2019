@@ -1,0 +1,40 @@
+% Use a modified ACM conference proceedings template
+\documentclass[sigconf]{acmart}
+
+% Disable some elements from ACM template
+\setcopyright{none}
+\settopmatter{printacmref=false,printfolios=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\acmConference[Machine Perception]{Machine Perception - ETH}{June 16}{2019}
+% \acmConference[WOODSTOCK'18]{ACM Woodstock conference}{July 29-August 3, 2018}{City, State, Country}
+
+\usepackage{booktabs} % For formal tables
+
+\begin{document}
+\title{Machine Perception Project 1: \\ Dynamic Gesture Recognition}
+
+\author{Nicolas K{\"u}chler}\affiliation{}
+\email{kunicola@student.ethz.ch}
+
+\author{Yoel Zweig}\affiliation{}
+\email{zweigy@student.ethz.ch}
+
+\begin{abstract}
+
+Deep neural networks have shown impressive results in the area of image classification, sometimes even outperforming humans.
+At the moment, the performance in video classification is not on the same level. This is due to the additional temporal dimension which makes the problem much harder.
+In this work, we tackle the task of classifying short video clips of 20 different Italian sign gestures using a combination of Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs). The predictions of three networks with identical base architectures but slightly different configurations are combined in a majority voting ensemble to further improve accuracy.
+Moreover, a variety of data augmentation and regularization techniques are used to prevent overfitting. 
+
+
+\end{abstract}
+
+\maketitle
+
+\input{body}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
+
+\end{document}
